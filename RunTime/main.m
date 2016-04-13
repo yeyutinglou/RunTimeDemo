@@ -42,6 +42,20 @@ int main(int argc, const char * argv[]) {
         //为成员变量赋值
         object_setIvar(peopleInstance, ageIvar, @18);
         //调用s方法
+       /* 
+        objc_msgSend(peopleInstance, s, @"大家好!");
+        默认会出现以下错误：
+        objc_msgSend()报错Too many arguments to function call ,expected 0,have3
+        直接通过objc_msgSend(self, setter, value)是报错，说参数过多。
+        请这样解决：
+        Build Setting–> Apple LLVM 7.0 – Preprocessing–> Enable Strict Checking of objc_msgSend Calls 改为 NO
+        */
+        
+        /*
+        ((void (*)(id, SEL, id))objc_msgSend)(peopleInstance, s, @"大家好");
+        强制转换objc_msgSend函数类型为带三个参数且返回值为void函数，然后才能传三个参数
+         */
+        objc_msgSend(peopleInstance, s, @"大家好!");
        ((void (*)(id, SEL, id))objc_msgSend)(peopleInstance, s, @"大家好");
         //先销毁实例对象，才能销毁类对象
         peopleInstance = nil;
