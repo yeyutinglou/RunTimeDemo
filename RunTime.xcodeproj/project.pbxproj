@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		063FAD571CBCFF3B005C0952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 063FAD561CBCFF3B005C0952 /* main.m */; };
+		06463FD21CBE2721003F8562 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 06463FD11CBE2721003F8562 /* People.m */; };
+		0652DE491CC094EB00DEA388 /* People+height.m in Sources */ = {isa = PBXBuildFile; fileRef = 0652DE481CC094EB00DEA388 /* People+height.m */; };
+		0652DE4C1CC0B79500DEA388 /* Archive.m in Sources */ = {isa = PBXBuildFile; fileRef = 0652DE4B1CC0B79500DEA388 /* Archive.m */; };
+		0652DE4F1CC0BBE100DEA388 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0652DE4E1CC0BBE100DEA388 /* Model.m */; };
+		0652DE521CC0DB4F00DEA388 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 0652DE511CC0DB4F00DEA388 /* Bird.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		063FAD531CBCFF3B005C0952 /* RunTime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RunTime; sourceTree = BUILT_PRODUCTS_DIR; };
 		063FAD561CBCFF3B005C0952 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		06463FD01CBE2721003F8562 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		06463FD11CBE2721003F8562 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		0652DE471CC094EB00DEA388 /* People+height.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "People+height.h"; sourceTree = "<group>"; };
+		0652DE481CC094EB00DEA388 /* People+height.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "People+height.m"; sourceTree = "<group>"; };
+		0652DE4A1CC0B79500DEA388 /* Archive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archive.h; sourceTree = "<group>"; };
+		0652DE4B1CC0B79500DEA388 /* Archive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Archive.m; sourceTree = "<group>"; };
+		0652DE4D1CC0BBE100DEA388 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		0652DE4E1CC0BBE100DEA388 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		0652DE501CC0DB4F00DEA388 /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		0652DE511CC0DB4F00DEA388 /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				063FAD561CBCFF3B005C0952 /* main.m */,
+				06463FD01CBE2721003F8562 /* People.h */,
+				06463FD11CBE2721003F8562 /* People.m */,
+				0652DE471CC094EB00DEA388 /* People+height.h */,
+				0652DE481CC094EB00DEA388 /* People+height.m */,
+				0652DE4A1CC0B79500DEA388 /* Archive.h */,
+				0652DE4B1CC0B79500DEA388 /* Archive.m */,
+				0652DE4D1CC0BBE100DEA388 /* Model.h */,
+				0652DE4E1CC0BBE100DEA388 /* Model.m */,
+				0652DE501CC0DB4F00DEA388 /* Bird.h */,
+				0652DE511CC0DB4F00DEA388 /* Bird.m */,
 			);
 			path = RunTime;
 			sourceTree = "<group>";
@@ -118,7 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0652DE491CC094EB00DEA388 /* People+height.m in Sources */,
+				06463FD21CBE2721003F8562 /* People.m in Sources */,
+				0652DE521CC0DB4F00DEA388 /* Bird.m in Sources */,
+				0652DE4C1CC0B79500DEA388 /* Archive.m in Sources */,
 				063FAD571CBCFF3B005C0952 /* main.m in Sources */,
+				0652DE4F1CC0BBE100DEA388 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
