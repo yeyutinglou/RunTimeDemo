@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06025B611CC316B30011B592 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 06025B601CC316B30011B592 /* MyClass.m */; };
 		063FAD571CBCFF3B005C0952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 063FAD561CBCFF3B005C0952 /* main.m */; };
 		06463FD21CBE2721003F8562 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 06463FD11CBE2721003F8562 /* People.m */; };
 		0652DE491CC094EB00DEA388 /* People+height.m in Sources */ = {isa = PBXBuildFile; fileRef = 0652DE481CC094EB00DEA388 /* People+height.m */; };
@@ -28,6 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06025B5F1CC316B30011B592 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		06025B601CC316B30011B592 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 		063FAD531CBCFF3B005C0952 /* RunTime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RunTime; sourceTree = BUILT_PRODUCTS_DIR; };
 		063FAD561CBCFF3B005C0952 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06463FD01CBE2721003F8562 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				0652DE4E1CC0BBE100DEA388 /* Model.m */,
 				0652DE501CC0DB4F00DEA388 /* Bird.h */,
 				0652DE511CC0DB4F00DEA388 /* Bird.m */,
+				06025B5F1CC316B30011B592 /* MyClass.h */,
+				06025B601CC316B30011B592 /* MyClass.m */,
 			);
 			path = RunTime;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				0652DE4C1CC0B79500DEA388 /* Archive.m in Sources */,
 				063FAD571CBCFF3B005C0952 /* main.m in Sources */,
 				0652DE4F1CC0BBE100DEA388 /* Model.m in Sources */,
+				06025B611CC316B30011B592 /* MyClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

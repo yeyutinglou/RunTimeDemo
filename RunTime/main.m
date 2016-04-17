@@ -12,6 +12,7 @@
 #import "People+height.h"
 #import "Model.h"
 #import "Bird.h"
+#import "MyClass.h"
 #if TARGET_IPHONE_SIMULATOR
 #import <objc/objc-runtime.h>
 #else
@@ -106,6 +107,73 @@ int main(int argc, const char * argv[]) {
         bird.name = @"bird";
         ((void(*)(id, SEL))objc_msgSend)((id)bird, @selector(sing));
         
+        //myClass
+        MyClass *myClass = [[MyClass alloc] init];
+        unsigned int outCout = 0;
+        Class cls = myClass.class;
+        
+        //类名
+        NSLog(@"class name: %s",class_getName(cls));
+        //父类
+        NSLog(@"super class name: %s",class_getName(class_getSuperclass(cls)));
+        //是否有元素
+        NSLog(@"myClass is %@ a meta-class",class_isMetaClass(cls) ? @"" : @"not");
+        Class meta_class = objc_getMetaClass(class_getName(cls));
+        NSLog(@"%s's meta-class is %s",class_getName(cls),class_getName(meta_class));
+        //变量实例大小
+        NSLog(@"instance size: %zu",class_getInstanceSize(cls));
+        //成员变量
+        Ivar *ivars = class_copyIvarList(cls, &outCout);
+        for (int i = 0; i < outCout; i++) {
+            Ivar ivar = ivars[i];
+            NSLog(@"instance variable's name: %s at index: %d",ivar_getName(ivar),i);
+        }
+        free(ivars);
+        
+        Ivar string = class_getInstanceVariable(cls, "string");
+        if (string != NULL) {
+            NSLog(@"instance variable's name: %s",ivar_getName(string));
+        }
+        
+        //属性
+        objc_property_t *properties = class_copyPropertyList(cls, &outCout);
+        for (int i = 0; i < outCout; i++) {
+            objc_property_t property = properties[i];
+            NSLog(@"property's name: %s at index: %d",property_getName(property),i);
+        }
+        free(properties);
+        
+        objc_property_t array = class_getProperty(cls, "array");
+        if (array != NULL) {
+            NSLog(@"property's name: %s",property_getName(array));
+        }
+        
+        //方法
+        Method *methods = class_copyMethodList(cls, &outCout);
+        for (int i = 0; i < outCout; i++) {
+            Method method = methods[i];
+            NSLog(@"method's name: %p",method_getName(method));
+        }
+        free(methods);
+        //实例方法
+        Method method = class_getInstanceMethod(cls, @selector(method));
+        if (method != NULL) {
+            NSLog(@"method %p",method_getName(method));
+        }
+        //类方法
+        Method classMethod = class_getClassMethod(cls, @selector(classMethod));
+        if (classMethod != NULL) {
+            NSLog(@"classMethod: %p",method_getName(classMethod));
+        }
+        //协议
+        Protocol *__unsafe_unretained *protocols = class_copyProtocolList(cls, &outCout);
+        Protocol *protocol;
+        for (int i = 0; i < outCout; i++) {
+            protocol = protocols[i];
+            NSLog(@"protocol's name: %s",protocol_getName(protocol));
+        }
+        
+        NSLog(@"my class is %@ responsed to protocol%s",class_conformsToProtocol(cls, protocol) ? @"" : @"not",protocol_getName(protocol));
     }
     return 0;
 }
